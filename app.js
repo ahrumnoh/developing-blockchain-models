@@ -10,8 +10,12 @@ let blockchain = new Blockchain(genesisBlock)
 let block = blockchain.getNextBlock([transaction])
 blockchain.addBlock(block)
 
+<<<<<<< Updated upstream
 let anotherTransaction = new Transaction('steven', "Brian", 500)
 let block1 = blockchain.getNextBlock.getNextBlock([anotherTransaction, transaction])
 blockchain.addBlock(block1)
 
 console.log(blockchain)
+=======
+console.log(blockchain)
+>>>>>>> Stashed changes
