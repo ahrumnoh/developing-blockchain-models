@@ -1,4 +1,6 @@
 
+const express = require('express')
+const app = express()
 
 const Block = require('./block')
 const Blockchain = require('./blockchain')
@@ -11,4 +13,10 @@ let blockchain = new Blockchain(genesisBlock)
 
 let block = blockchain.getNextBlock([transaction])
 blockchain.addBlock(block)
+
+let anotherTransaction = new Transaction('Patrick', 'James', 500)
+let block1 = blockchain.getNextBlock([anotherTransaction, transaction])
+blockchain.addBlock(block1)
+
+
 console.log(blockchain)
